@@ -4,13 +4,18 @@
 <head>
     <title>Hello my web</title>
     <style>
-        #jab {
+        #title {
             display: inline;
             background-color: dodgerblue;
             color: red;
             opacity: 0.6;
 
 
+        }
+
+        body {
+            background-color: gold;
+            text-align: center;
         }
 
         p.jab {
@@ -26,17 +31,26 @@
             color: rgb(255, 255, 255);
         }
 
-        span {
-            display: block;
+        /* visited link */
+        a:visited {
+            display: inline;
+            color: rgb(255, 255, 255);
         }
 
-        body {
-            background-color: gold;
-            text-align: center;
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
         }
 
-        body {
-            background-color: gold;
+        /* selected link */
+        a:active {
+            color: blue;
+
+
+            span {
+                display: block;
+            }
+
         }
 
         div {
@@ -51,15 +65,14 @@
 
 <body>
 
-    <h1 id="jab">Is't me</h1>
+    <h1 id="title">Is't me</h1>
     <p class="jab">My name is Porramet</p>
     <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/14650358_1254424781290642_7442928340307733365_n.jpg?_nc_cat=107&_nc_sid=a4a2d7&_nc_eui2=AeF1QnkQKsi2Ly20f3aIWrBN-6SLPh3hbhD7pIs-HeFuEBLI8MInnBNxEoMbK5SSY964meUucrJel1h6XHS6iv6G&_nc_oc=AQnzgKKgLf92adCeUKMTHN92m7kY44S8rpYDHx0QN9xUongKEa5icXDqvuHuaPTGlrg&_nc_ht=scontent.fbkk10-1.fna&oh=253e57d21813cd64e393136f91bd1fa0&oe=5F08DA9D"
         alt="Girl in a jacket" width="500" height="600">
     <div>
-        <p class="facebook"><a href="https://www.facebook.com/proramet.ritdach/">Facebook</a></p>
+        <p class="facebook"><a href="https://www.facebook.com/proramet.ritdach/"target="_blank">Facebook</a></p>
     </div>
-    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-        Click </button>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click </button>
     <div>
         My name is Porramet Ritdach
     </div>
@@ -68,7 +81,6 @@
     </div>
 
 </body>
-
 
 
 </html>
