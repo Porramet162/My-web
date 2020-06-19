@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello my web</title>
+    <style>
+        #title {
+            display: inline;
+            background-color: dodgerblue;
+            color: red;
+            opacity: 0.8;
+            font-family: Impact, Charcoal, sans-serif;
+
+        }
+
+        body {
+            background-color: gold;
+            text-align: center;
+        }
+
+        p.jab {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            opacity: 0.3;
+        }
+
+
+        p.facebook {
+            display: inline;
+            background-color: dodgerblue;
+            color: rgb(255, 255, 255);
+        }
+
+        /* visited link */
+        a:visited {
+            display: inline;
+            color: rgb(255, 255, 255);
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+
+        }
+
+        div {
+
+            background-color: rgb(245, 185, 19);
+            color: black;
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1 id="title">Is't me</h1>
+    <p class="jab">My name is Porramet</p>
+    <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/14650358_1254424781290642_7442928340307733365_n.jpg?_nc_cat=107&_nc_sid=a4a2d7&_nc_eui2=AeF1QnkQKsi2Ly20f3aIWrBN-6SLPh3hbhD7pIs-HeFuEBLI8MInnBNxEoMbK5SSY964meUucrJel1h6XHS6iv6G&_nc_oc=AQnzgKKgLf92adCeUKMTHN92m7kY44S8rpYDHx0QN9xUongKEa5icXDqvuHuaPTGlrg&_nc_ht=scontent.fbkk10-1.fna&oh=253e57d21813cd64e393136f91bd1fa0&oe=5F08DA9D"
+        alt="Girl in a jacket" width="300" height="400">
+    <div>
+        <p class="facebook"><a href="https://www.facebook.com/proramet.ritdach/" target="_blank">Facebook</a></p>
+    </div>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click </button>
+  
+    <div>
+        My name is Porramet Ritdach
+    </div>
+    <div>
+        Nick name Jab
+    </div>
+
+    <div><br>
+        <form action="/action_page.php">
+            <label for="id">ID:</label><br>
+            <input type="text" id="id" name="id" placeholder="Your ID"><br>
+            <label for="lname">Password:</label><br>
+            <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+
+
+</html>
