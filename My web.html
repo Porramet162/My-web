@@ -52,7 +52,13 @@
 
             background-color: rgb(245, 185, 19);
             color: black;
+        }
 
+        form {
+            width: 300px;
+            padding: 25px;
+            background-color: lightblue;
+            display: inline-block;
         }
     </style>
 </head>
@@ -68,7 +74,7 @@
         <p class="facebook"><a href="https://www.facebook.com/proramet.ritdach/" target="_blank">Facebook</a></p>
     </div>
     <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click </button>
-  
+
     <div>
         My name is Porramet Ritdach
     </div>
@@ -76,7 +82,7 @@
         Nick name Jab
     </div>
 
-    <div><br>
+    <div class=login><br>
         <form action="/action_page.php">
             <label for="id">ID:</label><br>
             <input type="text" id="id" name="id" placeholder="Your ID"><br>
@@ -85,7 +91,7 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-    
+
 </body>
 
 
