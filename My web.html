@@ -3,76 +3,137 @@
 
 <head>
     <title>Hello my web</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
+        body {
+            background-color: gold;
+            text-align: center;
+
+        }
+
         #title {
             display: inline;
             background-color: dodgerblue;
             color: red;
             opacity: 0.8;
             font-family: Impact, Charcoal, sans-serif;
-
+            border-radius: 10px;
+            border-style:groove;
         }
 
-        body {
-            background-color: gold;
-            text-align: center;
-        }
-
-        p.jab {
-            background-color: rgb(255, 255, 255);
+        p.nameTitle {
+            background-color: rgb(245, 185, 19);
             color: rgb(0, 0, 0);
-            opacity: 0.3;
+            display: block;
+        }
+
+        p.photo {
+            margin-bottom: 0px;
+
+        }
+
+        /*ปุมลิงค์ Facebook*/
+        .facebook ul {
+
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+
+
         }
 
 
-        p.facebook {
-            display: inline;
-            background-color: dodgerblue;
-            color: rgb(255, 255, 255);
+        .facebook ul li {
+            list-style: none;
+            margin: 0 10px;
         }
 
-        /* visited link */
-        a:visited {
-            display: inline;
-            color: rgb(255, 255, 255);
+        .facebook ul li .fa {
+            color: #000000;
+            font-size: 25px;
+            line-height: 50px;
+            transition: .5s;
         }
 
-        /* mouse over link */
-        a:hover {
-            color: hotpink;
+        .facebook ul li .fa:hover {
+            color: #ffffff;
         }
 
-        /* selected link */
-        a:active {
-            color: blue;
+        .facebook ul li a {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            text-align: center;
+            transition: 0.5s;
+            transform: translate(0, 0px);
+            box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+        }
 
+        .facebook ul li a:hover {
+            transform: rotate(0deg) skew(0deg) translate(0, -10px);
+        }
+
+        .facebook ul li:nth-child(1) a:hover {
+            background-color: #3b5999;
         }
 
         div {
+            display: block;
 
-            background-color: rgb(245, 185, 19);
-            color: black;
         }
 
-        form {
-            width: 300px;
+        div.detail {
+            display: inline-block;
+            color: #ffffff;
+            background-color: rgb(245, 185, 19);
             padding: 25px;
-            background-color: lightblue;
+            border-color: rgb(254, 255, 255);
+            border-style: solid;
+            border-radius: 12px;
+        }
+
+        div.facebook {
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: rgb(77, 137, 247);
+            border-radius: 30px;
+        }
+
+        div.login {
             display: inline-block;
         }
 
-        .menu-page {
-            display: flex;
-            justify-content: center; 
-            box-sizing: border-box;
-            
+        div.group {
+            background-color: rgb(245, 185, 19);
         }
 
-        .item {
+        .login {
+            width: 300px;
+            padding: 25px;
+            background-color: rgb(225, 232, 235);
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        p.menu-page {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            flex-direction: row;
+        }
+
+        p.item {
+
             color: black;
             background-color: rgb(231, 247, 10);
-            
-            font-size: 25px;
+            font-size: 15px;
             display: inline-block;
             box-sizing: border-box;
             padding: 14px 20px;
@@ -89,21 +150,25 @@
 <body>
 
     <h1 id="title">Is't me</h1>
-    <p class="jab">My name is Porramet</p>
-    <img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/14650358_1254424781290642_7442928340307733365_n.jpg?_nc_cat=107&_nc_sid=a4a2d7&_nc_eui2=AeF1QnkQKsi2Ly20f3aIWrBN-6SLPh3hbhD7pIs-HeFuEBLI8MInnBNxEoMbK5SSY964meUucrJel1h6XHS6iv6G&_nc_oc=AQnzgKKgLf92adCeUKMTHN92m7kY44S8rpYDHx0QN9xUongKEa5icXDqvuHuaPTGlrg&_nc_ht=scontent.fbkk10-1.fna&oh=253e57d21813cd64e393136f91bd1fa0&oe=5F08DA9D"
-        alt="Girl in a jacket" width="300" height="400">
+    <p class="nameTitle">My name is Porramet</p>
+    <p class="photo"><img
+            src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/14650358_1254424781290642_7442928340307733365_n.jpg?_nc_cat=107&_nc_sid=a4a2d7&_nc_eui2=AeF1QnkQKsi2Ly20f3aIWrBN-6SLPh3hbhD7pIs-HeFuEBLI8MInnBNxEoMbK5SSY964meUucrJel1h6XHS6iv6G&_nc_oc=AQnzgKKgLf92adCeUKMTHN92m7kY44S8rpYDHx0QN9xUongKEa5icXDqvuHuaPTGlrg&_nc_ht=scontent.fbkk10-1.fna&oh=253e57d21813cd64e393136f91bd1fa0&oe=5F08DA9D"
+            alt="Girl in a jacket" width="300" height="400"></p>
     <div>
-        <p class="facebook"><a href="https://www.facebook.com/proramet.ritdach/" target="_blank">Facebook</a></p>
+        <div class="facebook ">
+            <ul>
+                <li><a href="https://www.facebook.com/proramet.ritdach/" target="_blank"><i
+                            class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click </button>
-
     <div>
-        My name is Porramet Ritdach
+        <div class="detail">
+            My name is Porramet Ritdach <br>
+            Nick name Jab
+        </div>
     </div>
-    <div>
-        Nick name Jab
-    </div>
-
     <div class=login><br>
         <form action="/action_page.php">
             <label for="id">ID:</label><br>
@@ -113,14 +178,17 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+
     <br>
-    <nav class="menu-page">
-        <div class="group">
-            <a class="item">Page 1</a>
-            <a class="item">Page 2</a>
-            <a class="item">Page 3</a>
-        </div>
-    </nav>
+    <div class="memu-page">
+        <nav class="menu-page">
+            <div class="group">
+                <button class="item" onclick="document.getElementById('demo').innerHTML = Date()">Page 1 </button>
+                <button class="item" onclick="document.getElementById('demo').innerHTML = Date()">Page 2 </button>
+                <button class="item" onclick="document.getElementById('demo').innerHTML = Date()">Page 3 </button>
+            </div>
+        </nav>
+    </div>
 </body>
 
 
