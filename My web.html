@@ -11,7 +11,8 @@
         body {
             background-color: gold;
             text-align: center;
-
+            margin: 0;
+            overflow: hidden;
         }
 
         #title {
@@ -21,7 +22,7 @@
             opacity: 0.8;
             font-family: Impact, Charcoal, sans-serif;
             border-radius: 10px;
-            border-style:groove;
+            border-style: groove;
         }
 
         p.nameTitle {
@@ -31,20 +32,22 @@
         }
 
         p.photo {
-            margin-bottom: 0px;
+            float: left;
+            margin-left: 140px;
+        }
 
+        div.block-right {
+            float: right;
+            margin-right: 250px;
         }
 
         /*ปุมลิงค์ Facebook*/
+         
         .facebook ul {
-
-            display: inline-block;
+            display: block;
             padding: 10px;
             margin: 10px;
-
-
         }
-
 
         .facebook ul li {
             list-style: none;
@@ -85,17 +88,17 @@
 
         div {
             display: block;
-
         }
 
         div.detail {
-            display: inline-block;
+            display: inline-flex;
             color: #ffffff;
             background-color: rgb(245, 185, 19);
             padding: 25px;
             border-color: rgb(254, 255, 255);
             border-style: solid;
             border-radius: 12px;
+            margin-top: 40px;
         }
 
         div.facebook {
@@ -106,31 +109,34 @@
             border-radius: 30px;
         }
 
-        div.login {
-            display: inline-block;
-        }
+      
 
         div.group {
             background-color: rgb(245, 185, 19);
         }
 
         .login {
+            display: block;
             width: 300px;
             padding: 25px;
             background-color: rgb(225, 232, 235);
             margin-bottom: 20px;
-            margin-top: 20px;
+            margin-top: 40px ;
+            margin-bottom: 40px;
+        }
+
+        .clearfix {
+            clear: both;
         }
 
         p.menu-page {
-            display: flex;
+            display: inline-block;
             justify-content: center;
             box-sizing: border-box;
             flex-direction: row;
         }
 
         p.item {
-
             color: black;
             background-color: rgb(231, 247, 10);
             font-size: 15px;
@@ -148,13 +154,33 @@
 
 
 <body>
-
-    <h1 id="title">Is't me</h1>
+    <div>
+        <h1 id="title">Is't me</h1>
+    </div>
     <p class="nameTitle">My name is Porramet</p>
     <p class="photo"><img
             src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/14650358_1254424781290642_7442928340307733365_n.jpg?_nc_cat=107&_nc_sid=a4a2d7&_nc_eui2=AeF1QnkQKsi2Ly20f3aIWrBN-6SLPh3hbhD7pIs-HeFuEBLI8MInnBNxEoMbK5SSY964meUucrJel1h6XHS6iv6G&_nc_oc=AQnzgKKgLf92adCeUKMTHN92m7kY44S8rpYDHx0QN9xUongKEa5icXDqvuHuaPTGlrg&_nc_ht=scontent.fbkk10-1.fna&oh=253e57d21813cd64e393136f91bd1fa0&oe=5F08DA9D"
-            alt="Girl in a jacket" width="300" height="400"></p>
-    <div>
+            alt="Girl in a jacket" width="400" height="500"></p>
+
+
+    <div class="block-right">
+
+        <div>
+            <div class="detail">
+                My name is Porramet Ritdach <br>
+                Nick name Jab
+            </div>
+        </div>
+        <div class=login>
+            <form action="/action_page.php">
+                <label for="id">ID:</label><br>
+                <input type="text" id="id" name="id" placeholder="Your ID"><br>
+                <label for="lname">Password:</label><br>
+                <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
         <div class="facebook ">
             <ul>
                 <li><a href="https://www.facebook.com/proramet.ritdach/" target="_blank"><i
@@ -162,24 +188,10 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div>
-        <div class="detail">
-            My name is Porramet Ritdach <br>
-            Nick name Jab
-        </div>
-    </div>
-    <div class=login><br>
-        <form action="/action_page.php">
-            <label for="id">ID:</label><br>
-            <input type="text" id="id" name="id" placeholder="Your ID"><br>
-            <label for="lname">Password:</label><br>
-            <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
-            <input type="submit" value="Submit">
-        </form>
+
     </div>
 
-    <br>
+    <div class="clearfix"></div>
     <div class="memu-page">
         <nav class="menu-page">
             <div class="group">
@@ -189,6 +201,8 @@
             </div>
         </nav>
     </div>
+
+
 </body>
 
 
