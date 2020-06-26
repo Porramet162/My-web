@@ -12,13 +12,17 @@
             background-color: gold;
             text-align: center;
             margin: 0;
-            /* overflow: hidden; */
         }
 
         div {
             display: block;
-            justify-content: center;
         }
+
+        /* div.content {
+            display: block;
+            background-color: #ff0606;
+            align-items: flex-start;
+        } */
 
         div.block-title {
             border-radius: 10px;
@@ -50,13 +54,9 @@
         }
 
         div.photo {
-            /* display: flex; */
             width: 50%;
             height: 500px;
             float: left;
-            /* margin-left: 160px; */
-            /* margin-top: 50px; */
-
         }
 
         .img-circle {
@@ -142,43 +142,40 @@
             /* margin-top: 40px; */
         }
 
-
-        div.group {
-            display: block;
-            justify-content: center;
-            background-color: rgb(245, 185, 19);
-        }
-
         .login {
             display: inline-flex;
             justify-content: center;
             width: 300px;
             padding: 25px;
             background-color: rgb(225, 232, 235);
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 20px;
-            /* margin-left: 20px; */
+        
         }
 
-        /* .clearfix {
+        .clearfix {
             clear: both;
-        } */
+        }
 
-        p.menu-page {
-            /* display: inline-block; */
-            float: inline-end;
-            display: flex;
+        /*Footer*/
+        /*---------------------------------------------------------------------------*/
+        div.footer {
+            display: block;
+            align-items: flex-end;
+            
+        }
+
+        div.menu-page {
+            display: block;
+            align-items: flex-end;
             justify-content: center;
-            box-sizing: border-box;
-            flex-direction: row;
-
+            background-color: rgb(245, 185, 19);
         }
 
         p.item {
             color: black;
             background-color: rgb(231, 247, 10);
             font-size: 15px;
-            /* display: inline-block; */
             box-sizing: border-box;
             padding: 14px 20px;
         }
@@ -199,55 +196,55 @@
         </div>
     </div>
     <p class="nameTitle">Bar & Restaurant</p>
-    <div class="photo"><img class="img-circle"
-            src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t31.0-8/28336058_2001303203452107_9222223734920963819_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeFUk0zgFfsLJH_RgccIdfLrhUIi-nPI3kOFQiL6c8jeQ8iVCgtdV02UdCgF3jJUZ2frMx0HmJ7XfMP-RBsOnsXa&_nc_oc=AQkTrFZgWyZ6sMkHEkganrwkPRfKj8gehVRExD_JUD2rluWwMSpLtQufglNG0Nh4Ac0&_nc_ht=scontent.fbkk4-3.fna&oh=13c351e7c913b4cd8a2635c389342364&oe=5F1A8051"
-            alt="Girl in a jacket" width="430" height="450">
-    </div>
 
+    <div class="content">
+        <div class="photo"><img class="img-circle"
+                src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t31.0-8/28336058_2001303203452107_9222223734920963819_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeFUk0zgFfsLJH_RgccIdfLrhUIi-nPI3kOFQiL6c8jeQ8iVCgtdV02UdCgF3jJUZ2frMx0HmJ7XfMP-RBsOnsXa&_nc_oc=AQkTrFZgWyZ6sMkHEkganrwkPRfKj8gehVRExD_JUD2rluWwMSpLtQufglNG0Nh4Ac0&_nc_ht=scontent.fbkk4-3.fna&oh=13c351e7c913b4cd8a2635c389342364&oe=5F1A8051"
+                alt="Girl in a jacket" width="430" height="450">
+        </div>
 
-    <div class="block-right">
-
-        <div>
-            <div class="detail">
-                ร้านอาหารและเครื่องดื่ม พร้อมดนตรีสด <br>
-                เวลาเปิด : 17:00 - 00:00 น. <br>
-                (ปิดทุกวันสำคัญทางศาสนา และวันหยุดนักขัตฤกษ์)
+        <div class="block-right">
+            <div>
+                <div class="detail">
+                    ร้านอาหารและเครื่องดื่ม พร้อมดนตรีสด <br>
+                    เวลาเปิด : 17:00 - 00:00 น. <br>
+                    (ปิดทุกวันสำคัญทางศาสนา และวันหยุดนักขัตฤกษ์)
+                </div>
             </div>
-        </div>
-        <div>
-        <div class=login>
-            <form action="/action_page.php">
-                <h3>Member Login</h3>
-                <label for="id">ID:</label><br>
-                <input type="text" id="id" name="id" placeholder="Your ID"><br>
-                <label for="lname">Password:</label><br>
-                <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-        </div>
+            <div>
+                <div class=login>
+                    <form action="/action_page.php">
+                        <h3>Member Login</h3>
+                        <label for="id">ID:</label><br>
+                        <input type="text" id="id" name="id" placeholder="Your ID"><br>
+                        <label for="lname">Password:</label><br>
+                        <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
 
-        <div class="facebook ">
-            <ul>
-                <li><a href="https://web.facebook.com/PluemPhuket/?ref=page_internal" target="_blank"><i
-                            class="fa fa-facebook"></i></a>
-                </li>
-            </ul>
-        </div>
+            <div class="facebook ">
+                <ul>
+                    <li><a href="https://web.facebook.com/PluemPhuket/?ref=page_internal" target="_blank"><i
+                                class="fa fa-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
 
+        </div>
     </div>
-
     <div class="clearfix"></div>
-    <marquee>
-        <font size=4 color="red">ช่วงนี้ร้านมีโปรโมชั่นพิเศษ ลด 20% ทั้งอาหารและเครื่องดื่ม!!!
-    </marquee>
-    <div class="memu-page">
-        <div class="group">
+    <div class="footer">
+        <marquee>
+            <font size=4 color="red">ช่วงนี้ร้านมีโปรโมชั่นพิเศษ ลด 20% ทั้งอาหารและเครื่องดื่ม!!!
+        </marquee>
+
+        <div class="menu-page">
             <button class="item" onclick="document.getElementById('demo').innerHTML = Date()">Page 1 </button>
             <button class="item" onclick="document.getElementById('demo').innerHTML = Date()">Page 2 </button>
             <button class="item" onclick="document.getElementById('demo').innerHTML = Date()">Page 3 </button>
         </div>
-
     </div>
 
 
