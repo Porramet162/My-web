@@ -9,25 +9,47 @@
 
     <style>
         body {
+            height: 700px;
+            width: 100%;
             background-color: gold;
             text-align: center;
-            margin: 0;
+            margin: 0, auto;
+            margin-left: auto;
         }
 
         div {
             display: block;
         }
 
-        div.header {
+        /*-------------------------------------------Layout------------------------------------------------*/
+        header {
             display: block;
             margin-top: 10px;
         }
 
-        div.content {
-            display: block;
-            background-color: #ff0606;
-            align-items: flex-start;
+        section {
+            height: 70%;
+            width: 50%;
+            float: left;
+
         }
+
+
+        aside {
+            height: 70%;
+            width: 50%;
+            flex-direction: column;
+            align-content: center;
+            float: right;
+        }
+
+        footer {
+            height: 10%;
+            width: 100%;
+            float: inline-end;
+        }
+
+
 
         div.block-title {
             border-radius: 10px;
@@ -58,28 +80,16 @@
             display: block;
         }
 
-        div.photo {
-            width: 50%;
-            height: 500px;
-            float: left;
+        .photo {
+            justify-content: center;
+            align-items: center;
         }
 
         .img-circle {
             border-radius: 50%;
-            align-items: center;
-            justify-content: center;
-
         }
 
-        div.block-right {
-            width: 50%;
-            height: 500px;
-            flex-direction: column;
-            align-content: center;
-            align-content: space-between;
-            float: right;
-            /* margin-right: 280px; */
-        }
+
 
         /*ปุมลิงค์ Facebook*/
         /*---------------------------------------------------------------------------------------------*/
@@ -162,15 +172,6 @@
             clear: both;
         }
 
-        /*Footer*/
-        /*---------------------------------------------------------------------------*/
-        div.footer {
-            display: block;
-            align-items: flex-end;
-            background-color: #000000;
-
-        }
-
         div.menu-page {
             display: block;
             align-items: flex-end;
@@ -195,7 +196,7 @@
 
 
 <body>
-    <div class="header">
+    <header>
         <div>
             <div class="block-title">
                 <h1 id="title1">ปลื้ม</h1>
@@ -203,58 +204,63 @@
             </div>
         </div>
         <p class="nameTitle">Bar & Restaurant</p>
-    </div>
+    </header>
 
-    <div class="content">
-        <div class="photo"><img class="img-circle"
+    <section>
+        <nav class="photo">
+            <img class="img-circle"
                 src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t31.0-8/28336058_2001303203452107_9222223734920963819_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeFUk0zgFfsLJH_RgccIdfLrhUIi-nPI3kOFQiL6c8jeQ8iVCgtdV02UdCgF3jJUZ2frMx0HmJ7XfMP-RBsOnsXa&_nc_oc=AQkTrFZgWyZ6sMkHEkganrwkPRfKj8gehVRExD_JUD2rluWwMSpLtQufglNG0Nh4Ac0&_nc_ht=scontent.fbkk4-3.fna&oh=13c351e7c913b4cd8a2635c389342364&oe=5F1A8051"
                 alt="Girl in a jacket" width="430" height="450">
+        </nav>
+    </section>
+
+    <aside>
+        <div>
+            <div class="detail">
+                ร้านอาหารและเครื่องดื่ม พร้อมดนตรีสด <br>
+                เวลาเปิด : 17:00 - 00:00 น. <br>
+                (ปิดทุกวันสำคัญทางศาสนา และวันหยุดนักขัตฤกษ์)
+            </div>
+        </div>
+        <div>
+            <div class=login>
+                <form action="/action_page.php">
+                    <h3>Member Login</h3>
+                    <label for="id">ID:</label><br>
+                    <input type="text" id="id" name="id" placeholder="Your ID"><br>
+                    <label for="lname">Password:</label><br>
+                    <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
 
-        <div class="block-right">
-            <div>
-                <div class="detail">
-                    ร้านอาหารและเครื่องดื่ม พร้อมดนตรีสด <br>
-                    เวลาเปิด : 17:00 - 00:00 น. <br>
-                    (ปิดทุกวันสำคัญทางศาสนา และวันหยุดนักขัตฤกษ์)
-                </div>
-            </div>
-            <div>
-                <div class=login>
-                    <form action="/action_page.php">
-                        <h3>Member Login</h3>
-                        <label for="id">ID:</label><br>
-                        <input type="text" id="id" name="id" placeholder="Your ID"><br>
-                        <label for="lname">Password:</label><br>
-                        <input type="text" id="pass" name="pass" placeholder="Your password"><br><br>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-
-            <div class="facebook ">
-                <ul>
-                    <li><a href="https://web.facebook.com/PluemPhuket/?ref=page_internal" target="_blank"><i
-                                class="fa fa-facebook"></i></a>
-                    </li>
-                </ul>
-            </div>
-
+        <div class="facebook ">
+            <ul>
+                <li><a href="https://web.facebook.com/PluemPhuket/?ref=page_internal" target="_blank"><i
+                            class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="clearfix">
-    <div class="footer">
+
+    </aside>
+
+    <div class="clearfix"></div>
+    <footer>
         <marquee>
             <font size=4 color="red">ช่วงนี้ร้านมีโปรโมชั่นพิเศษ ลด 20% ทั้งอาหารและเครื่องดื่ม!!!
         </marquee>
 
         <div class="menu-page">
-            <input type="button" onclick="window.location.href='https://web.facebook.com/PluemPhuket/?ref=page_internal'" value = "Page 1"> 
-            <input type="button" onclick="window.location.href='https://web.facebook.com/PluemPhuket/?ref=page_internal'" value = "Page 2"> 
-            <input type="button" onclick="window.location.href='https://web.facebook.com/PluemPhuket/?ref=page_internal'" value = "Page 3">   
+            <input type="button"
+                onclick="window.location.href='https://web.facebook.com/PluemPhuket/?ref=page_internal'" value="Page 1">
+            <input type="button"
+                onclick="window.location.href='https://web.facebook.com/PluemPhuket/?ref=page_internal'" value="Page 2">
+            <input type="button"
+                onclick="window.location.href='https://web.facebook.com/PluemPhuket/?ref=page_internal'" value="Page 3">
         </div>
-    </div>
-    </div>
+    </footer>
+
 
 </body>
 
